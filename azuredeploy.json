@@ -146,7 +146,12 @@
       }
     },
     "32bitWorkerProcess": {
-      "type": "boolean",
+      "type": "string",
+      "allowedValues": [
+        "true",
+        "false"
+      ],
+      "defaultValue": "true",
       "metadata": {
         "description": "Use 32bit worker process, false for 64"
       }
@@ -163,7 +168,7 @@
       }
     },
     "alwaysOn": {
-      "type": "boolean",
+      "type": "string",
       "allowedValues": [
         "true",
         "false"

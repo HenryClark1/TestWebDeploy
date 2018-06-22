@@ -257,8 +257,7 @@
         "clientAffinityEnabled": true,
         "clientCertEnabled": false,
         "hostNamesDisabled": false,
-        "containerSize": "integer",
-        "httpsOnly": "boolean"
+        "httpsOnly": false
       },
       "identity": {
         "type": "SystemAssigned"

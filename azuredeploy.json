@@ -80,9 +80,20 @@
     },
     "sslState": {
         "type": "string",
+        "allowedValues": [
+          "Disabled",
+          "SniEnabled",
+          "IpBasedEnabled"
+        ],
         "defaultValue": "Disabled",
         "metadata": {
           "description": "Is SSL enabled"
+      }
+    },
+    "defaultDocuments": {
+      "type": "string",
+      "metadata": {
+        "description": "Default Document, leave blank if using default"
       }
     }
   },
@@ -117,11 +128,11 @@
           }
         ],
         "serverFarmId": "[parameters('hostingPlanName')]",
-        "reserved": "boolean",
+        "reserved": false,
         "siteConfig": {
-          "numberOfWorkers": "integer",
+          "numberOfWorkers": "[parameters('workerSize')]",
           "defaultDocuments": [
-            "string"
+            "[parameters('defaultDocuments')]"
           ],
           "netFrameworkVersion": "string",
           "phpVersion": "string",

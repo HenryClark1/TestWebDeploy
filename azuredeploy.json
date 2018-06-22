@@ -289,20 +289,6 @@
         "clientCertEnabled": false,
         "hostNamesDisabled": false,
         "containerSize": "integer",
-        "dailyMemoryTimeQuota": "integer",
-        "cloningInfo": {
-          "correlationId": "string",
-          "overwrite": "boolean",
-          "cloneCustomHostNames": "boolean",
-          "cloneSourceControl": "boolean",
-          "sourceWebAppId": "string",
-          "hostingEnvironment": "string",
-          "appSettingsOverrides": {},
-          "configureLoadBalancing": "boolean",
-          "trafficManagerProfileId": "string",
-          "trafficManagerProfileName": "string",
-          "ignoreQuotas": "boolean"
-        },
         "httpsOnly": "boolean"
       },
       "identity": {

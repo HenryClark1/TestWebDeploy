@@ -148,10 +148,11 @@
     "javaContainer": {
       "type": "string",
       "allowedValues": [
+        "",
         "TOMCAT",
         "JETTY"
       ],
-      "defaultValue": "TOMCAT",
+      "defaultValue": "",
       "metadata": {
         "description": "Container"
       }
@@ -159,6 +160,7 @@
     "javaContainerVersion": {
       "type": "string",
       "allowedValues": [
+        "",
         "7.0",
         "8.0",
         "8.5",
@@ -166,7 +168,7 @@
         "9.1",
         "9.3"
       ],
-      "defaultValue": "8.0",
+      "defaultValue": "",
       "metadata": {
         "description": "Java Version"
       }
@@ -269,6 +271,15 @@
             "maxPercentageCpu": "80",
             "maxMemoryInMb": "900",
             "maxDiskSizeInMb": "900"
+          },
+          "push": {
+            "kind": "string",
+            "properties": {
+              "isPushEnabled": "boolean",
+              "tagWhitelistJson": "string",
+              "tagsRequiringAuth": "string",
+              "dynamicTagsJson": "string"
+            }
           },
           "http20Enabled": false,
           "minTlsVersion": "1.0"

@@ -285,12 +285,9 @@
           "minTlsVersion": "1.0"
         },
         "scmSiteAlsoStopped": false,
-        "hostingEnvironmentProfile": {
-          "id": "[parameters('hostingPlanName')]"
-        },
-        "clientAffinityEnabled": "boolean",
-        "clientCertEnabled": "boolean",
-        "hostNamesDisabled": "boolean",
+        "clientAffinityEnabled": true,
+        "clientCertEnabled": false,
+        "hostNamesDisabled": false,
         "containerSize": "integer",
         "dailyMemoryTimeQuota": "integer",
         "cloningInfo": {
@@ -305,19 +302,6 @@
           "trafficManagerProfileId": "string",
           "trafficManagerProfileName": "string",
           "ignoreQuotas": "boolean"
-        },
-        "snapshotInfo": {
-          "kind": "string",
-          "properties": {
-            "snapshotTime": "string",
-            "recoveryTarget": {
-              "location": "string",
-              "id": "string"
-            },
-            "overwrite": "boolean",
-            "recoverConfiguration": "boolean",
-            "ignoreConflictingHostNames": "boolean"
-          }
         },
         "httpsOnly": "boolean"
       },

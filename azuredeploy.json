@@ -90,12 +90,6 @@
           "description": "Is SSL enabled"
       }
     },
-    "defaultDocuments": {
-      "type": "string",
-      "metadata": {
-        "description": "Default Document, leave blank if using default"
-      }
-    },
     "netFrameworkVersion": {
       "type": "string",
       "allowedValues": [
@@ -213,32 +207,13 @@
         "reserved": false,
         "siteConfig": {
           "numberOfWorkers": "[parameters('workerSize')]",
-          "defaultDocuments": [
-            "[parameters('defaultDocuments')]"
-          ],
           "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
           "phpVersion": "[parameters('phpVersion')]",
           "pythonVersion": "[parameters('pythonVersion')]",
-          "nodeVersion": "string",
           "httpLoggingEnabled": true,
           "logsDirectorySizeLimit": "40",
           "detailedErrorLoggingEnabled": false,
           "publishingUsername": "WebDeploymentUser987",
-          "connectionStrings": [
-            {
-              "name": "string",
-              "connectionString": "string",
-              "type": "string"
-            }
-          ],
-          "handlerMappings": [
-            {
-              "extension": "string",
-              "scriptProcessor": "string",
-              "arguments": "string"
-            }
-          ],
-          "documentRoot": "string",
           "scmType": "none",
           "use32BitWorkerProcess": "[parameters('32bitWorkerProcess')]",
           "webSocketsEnabled": false,

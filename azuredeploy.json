@@ -245,42 +245,11 @@
           "alwaysOn": "[parameters('alwaysOn')]",
           "javaVersion": "[parameters('javaVersion')]",
           "managedPipelineMode": "[parameters('managedPipeline')]",
-          "virtualApplications": [
-            {
-              "virtualPath": "string",
-              "physicalPath": "string",
-              "preloadEnabled": "boolean",
-              "virtualDirectories": [
-                {
-                  "virtualPath": "string",
-                  "physicalPath": "string"
-                }
-              ]
-            }
-          ],
           "limits": {
             "maxPercentageCpu": "80",
             "maxMemoryInMb": "900",
             "maxDiskSizeInMb": "900"
           },
-          "push": {
-            "kind": "string",
-            "properties": {
-              "isPushEnabled": false,
-              "tagWhitelistJson": "string",
-              "tagsRequiringAuth": "string",
-              "dynamicTagsJson": "string"
-            }
-          },
-          "apiDefinition": {
-            "url": "string"
-          },
-          "ipSecurityRestrictions": [
-            {
-              "ipAddress": "string",
-              "subnetMask": "string"
-            }
-          ],
           "http20Enabled": false,
           "minTlsVersion": "1.0"
         },

@@ -147,11 +147,6 @@
     },
     "32bitWorkerProcess": {
       "type": "boolean",
-      "allowedValues": [
-        "true",
-        "false"
-      ],
-      "defaultValue": "true",
       "metadata": {
         "description": "Use 32bit worker process, false for 64"
       }

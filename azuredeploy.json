@@ -121,7 +121,7 @@
         "enabled": true,
         "hostNameSslStates": [
           {
-            "name": "[parameters('sslHostName')]",
+            "name": "[parameters('customHostName')]",
             "sslState": "[parameters('sslState')]",
             "toUpdate": true,
             "hostType": "standard"

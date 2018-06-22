@@ -171,6 +171,17 @@
       "metadata": {
         "description": "Is site always loaded, default false"
       }
+    },
+    "httpsOnly": {
+      "type": "string",
+      "allowedValues": [
+        "On",
+        "Off"
+      ],
+      "defaultValue": "On",
+      "metadata": {
+        "description": "On turns off http"
+      }
     }
   },
   "resources": [
@@ -232,7 +243,7 @@
         "clientAffinityEnabled": true,
         "clientCertEnabled": false,
         "hostNamesDisabled": false,
-        "httpsOnly": false
+        "httpsOnly": "[parameters('httpsOnly')]"
       },
       "identity": {
         "type": "SystemAssigned"

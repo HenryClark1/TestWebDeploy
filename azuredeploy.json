@@ -67,9 +67,9 @@
         "description": "Location for all resources."
       }
     },
-    "sslHostName": {
+    "customHostName": {
       "type": "string",
-      "defaultValue": "[parameters('siteName').azurewebsites.net]",
+      "defaultValue": "<insertsitename>.azurewebsites.net]",
       "metadata": {
         "description": "Custom Host Name, default is sitename.azurewebsites.net"
       }
@@ -98,7 +98,7 @@
         "enabled": true,
         "hostNameSslStates": [
           {
-            "name": "[parameters('sslHostName')]",
+            "name": "[parameters('customHostName')]",
             "sslState": "[parameters('sslState')]",
             "toUpdate": true,
             "hostType": "standard"

@@ -161,17 +161,6 @@
         "description": "Managed Pipeline version, Classic for legacy apps"
       }
     },
-    "alwaysOn": {
-      "type": "string",
-      "allowedValues": [
-        "true",
-        "false"
-      ],
-      "defaultValue": "false",
-      "metadata": {
-        "description": "Is site always loaded, default false"
-      }
-    },
     "httpsOnly": {
       "type": "string",
       "allowedValues": [
@@ -181,6 +170,17 @@
       "defaultValue": "On",
       "metadata": {
         "description": "On turns off http"
+      }
+    },
+    "alwaysOn": {
+      "type": "string",
+      "allowedValues": [
+        "true",
+        "false"
+      ],
+      "defaultValue": "false",
+      "metadata": {
+        "description": "Is site always loaded, default false"
       }
     }
   },

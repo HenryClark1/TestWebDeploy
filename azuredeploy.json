@@ -133,7 +133,19 @@
         "description": "Python Version"
       }
     },
-    "workerProcess": {
+    "javaVersion": {
+      "type": "string",
+      "allowedValues": [
+        "Off",
+        "Java 7",
+        "Java 8"
+      ],
+      "defaultValue": "Off",
+      "metadata": {
+        "description": "Java Version"
+      }
+    },
+    "32bitWorkerProcess": {
       "type": "boolean",
       "allowedValues": [
         "true",
@@ -142,6 +154,17 @@
       "defaultValue": "true",
       "metadata": {
         "description": "Use 32bit worker process, false for 64"
+      }
+    },
+    "managedPipeline": {
+      "type": "string",
+      "allowedValues": [
+        "Integrated",
+        "Classic"
+      ],
+      "defaultValue": "Integrated",
+      "metadata": {
+        "description": "Managed Pipeline version, Classic for legacy apps"
       }
     },
     "alwaysOn": {
@@ -217,14 +240,11 @@
           ],
           "documentRoot": "string",
           "scmType": "none",
-          "use32BitWorkerProcess": "[parameters('workerProcess')]",
-          "webSocketsEnabled": "boolean",
+          "use32BitWorkerProcess": "[parameters('32bitWorkerProcess')]",
+          "webSocketsEnabled": false,
           "alwaysOn": "[parameters('alwaysOn')]",
-          "javaVersion": "string",
-          "javaContainer": "string",
-          "javaContainerVersion": "string",
-          "appCommandLine": "string",
-          "managedPipelineMode": "string",
+          "javaVersion": "[parameters('javaVersion')]",
+          "managedPipelineMode": "[parameters('managedPipeline')]",
           "virtualApplications": [
             {
               "virtualPath": "string",

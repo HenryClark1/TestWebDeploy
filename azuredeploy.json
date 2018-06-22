@@ -258,69 +258,15 @@
               ]
             }
           ],
-          "loadBalancing": "string",
-          "experiments": {
-            "rampUpRules": [
-              {
-                "actionHostName": "string",
-                "reroutePercentage": "number",
-                "changeStep": "number",
-                "changeIntervalInMinutes": "integer",
-                "minReroutePercentage": "number",
-                "maxReroutePercentage": "number",
-                "changeDecisionCallbackUrl": "string",
-                "name": "string"
-              }
-            ]
-          },
           "limits": {
-            "maxPercentageCpu": "number",
-            "maxMemoryInMb": "integer",
-            "maxDiskSizeInMb": "integer"
-          },
-          "autoHealEnabled": "boolean",
-          "autoHealRules": {
-            "triggers": {
-              "requests": {
-                "count": "integer",
-                "timeInterval": "string"
-              },
-              "privateBytesInKB": "integer",
-              "statusCodes": [
-                {
-                  "status": "integer",
-                  "subStatus": "integer",
-                  "win32Status": "integer",
-                  "count": "integer",
-                  "timeInterval": "string"
-                }
-              ],
-              "slowRequests": {
-                "timeTaken": "string",
-                "count": "integer",
-                "timeInterval": "string"
-              }
-            },
-            "actions": {
-              "actionType": "string",
-              "customAction": {
-                "exe": "string",
-                "parameters": "string"
-              },
-              "minProcessExecutionTime": "string"
-            }
-          },
-          "tracingOptions": "string",
-          "vnetName": "string",
-          "cors": {
-            "allowedOrigins": [
-              "string"
-            ]
+            "maxPercentageCpu": "80",
+            "maxMemoryInMb": "900",
+            "maxDiskSizeInMb": "900"
           },
           "push": {
             "kind": "string",
             "properties": {
-              "isPushEnabled": "boolean",
+              "isPushEnabled": false,
               "tagWhitelistJson": "string",
               "tagsRequiringAuth": "string",
               "dynamicTagsJson": "string"
@@ -329,20 +275,18 @@
           "apiDefinition": {
             "url": "string"
           },
-          "autoSwapSlotName": "string",
-          "localMySqlEnabled": "boolean",
           "ipSecurityRestrictions": [
             {
               "ipAddress": "string",
               "subnetMask": "string"
             }
           ],
-          "http20Enabled": "boolean",
-          "minTlsVersion": "string"
+          "http20Enabled": false,
+          "minTlsVersion": "1.0"
         },
-        "scmSiteAlsoStopped": "boolean",
+        "scmSiteAlsoStopped": false,
         "hostingEnvironmentProfile": {
-          "id": "string"
+          "id": "[parameters('hostingPlanName')]"
         },
         "clientAffinityEnabled": "boolean",
         "clientCertEnabled": "boolean",

@@ -76,13 +76,15 @@
       "defaultValue": "<insertsitename>.azurewebsites.net",
       "metadata": {
         "description": "Custom Host Name, default is sitename.azurewebsites.net"
-      },
+      }
+    },
     "sslState": {
         "type": "string",
         "defaultValue": "Disabled",
         "metadata": {
           "description": "Is SSL enabled"
       }
+    }
   },
   "resources": [
     {
@@ -108,7 +110,7 @@
         "enabled": true,
         "hostNameSslStates": [
           {
-            "name": "[parameters('customHostName')]",
+            "name": "[parameters('sslHostName')]",
             "sslState": "[parameters('sslState')]",
             "toUpdate": true,
             "hostType": "standard"
@@ -298,24 +300,7 @@
       },
       "identity": {
         "type": "SystemAssigned"
-      },
-      "resources": [
-        {
-          "apiVersion": "2015-08-01",
-          "name": "web",
-          "type": "sourcecontrols",
-          "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
-          ],
-          "properties": {
-            "RepoUrl": "[parameters('repoURL')]",
-            "branch": "[parameters('branch')]",
-            "IsManualIntegration": true
-          }
-        }
-      ]
+      }
     }
-    ]
-    }
-  }
+  ]
 }

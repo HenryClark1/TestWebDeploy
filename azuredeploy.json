@@ -275,7 +275,7 @@
           "push": {
             "kind": "string",
             "properties": {
-              "isPushEnabled": "boolean",
+              "isPushEnabled": true,
               "tagWhitelistJson": "string",
               "tagsRequiringAuth": "string",
               "dynamicTagsJson": "string"

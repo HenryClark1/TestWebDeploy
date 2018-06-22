@@ -38,11 +38,11 @@
     "workerSize": {
       "type": "string",
       "allowedValues": [
-        "0",
-        "1",
-        "2"
+        "Small",
+        "Medium",
+        "Large"
       ],
-      "defaultValue": "0",
+      "defaultValue": "Small",
       "metadata": {
         "description": "The instance size of the hosting plan (small, medium, or large)."
       }
@@ -62,16 +62,26 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]",
+      "allowedValues": [
+        "australiaeast",
+        "australiasoutheast"
+      ],
+      "defaultValue": "australiaeast",
       "metadata": {
         "description": "Location for all resources."
       }
     },
     "customHostName": {
       "type": "string",
-      "defaultValue": "<insertsitename>.azurewebsites.net]",
+      "defaultValue": "<insertsitename>.azurewebsites.net",
       "metadata": {
         "description": "Custom Host Name, default is sitename.azurewebsites.net"
+      },
+    "sslState": {
+        "type": "string",
+        "defaultValue": "Disabled",
+        "metadata": {
+          "description": "Is SSL enabled"
       }
   },
   "resources": [
